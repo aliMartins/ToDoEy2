@@ -34,6 +34,12 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="ToDoEy" id="jZR-h7-rKH">
                         <barButtonItem key="backBarButtonItem" title="Voltar" id="ChK-pW-G9Z"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fWR-H6-J2A">
+                            <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="addButtonPressed:" destination="GJD-7C-UWE" id="gmW-AL-st1"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mpG-2W-N79" userLabel="First Responder" sceneMemberID="firstResponder"/>
