@@ -8,9 +8,11 @@
 
 import Foundation
 
-class Item {
+class Item: Codable {
+    // mark our class as conforming toprotcols encodables
     
     var title : String = ""
     var done : Bool = false
     
+    // cant have a custom class
 }
