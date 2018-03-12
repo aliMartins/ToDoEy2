@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--ToDoEy-->
+        <!--Items-->
         <scene sceneID="tgg-Zg-dol">
             <objects>
                 <tableViewController id="GJD-7C-UWE" customClass="ToDoListViewController" customModule="ToDoEy2" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,9 +17,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="aKL-Wo-CH5">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="GJD-7C-UWE" id="zCz-fd-5x2"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDoItemCell" id="buL-nN-tk5">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="buL-nN-tk5" id="FNe-Uw-Atg">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -32,7 +40,7 @@
                             <outlet property="delegate" destination="GJD-7C-UWE" id="NgT-AK-P2H"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="ToDoEy" id="jZR-h7-rKH">
+                    <navigationItem key="navigationItem" title="Items" id="jZR-h7-rKH">
                         <barButtonItem key="backBarButtonItem" title="Voltar" id="ChK-pW-G9Z"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="fWR-H6-J2A">
                             <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -44,7 +52,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mpG-2W-N79" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="196" y="106.59670164917542"/>
+            <point key="canvasLocation" x="95" y="108"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Wmr-BS-dbw">
@@ -61,12 +69,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="GJD-7C-UWE" kind="relationship" relationship="rootViewController" id="SMV-uR-A8x"/>
+                        <segue destination="GJD-7C-UWE" kind="relationship" relationship="rootViewController" id="sfM-bD-Uny"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jLI-fj-FJW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-521" y="107"/>
+            <point key="canvasLocation" x="-850" y="94"/>
         </scene>
     </scenes>
 </document>
