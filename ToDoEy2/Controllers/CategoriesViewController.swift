@@ -17,7 +17,7 @@ class CategoriesViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(dataFilePath)
+        print(dataFilePath!)
         loadCategories()
 
     }
