@@ -9,6 +9,45 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Categories View Controller-->
+        <scene sceneID="RjR-Tv-A0o">
+            <objects>
+                <tableViewController id="w3h-3I-F2v" customClass="CategoriesViewController" customModule="ToDoEy2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="FkB-uL-m4w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" id="aqo-W9-88p">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aqo-W9-88p" id="SU7-KI-Tbp">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="w3h-3I-F2v" id="DGe-iV-zfD"/>
+                            <outlet property="delegate" destination="w3h-3I-F2v" id="bbI-hO-hBq"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="tzA-R0-4Ic">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="xj5-uJ-ZAe">
+                            <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="newCategoryButPresesd:" destination="w3h-3I-F2v" id="6Kv-CJ-5zc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="GJD-7C-UWE" kind="show" identifier="GoToItems" id="TUQ-qK-xck"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XU2-wl-dnS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-140" y="77"/>
+        </scene>
         <!--Items-->
         <scene sceneID="tgg-Zg-dol">
             <objects>
@@ -52,7 +91,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mpG-2W-N79" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="95" y="108"/>
+            <point key="canvasLocation" x="521" y="93"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Wmr-BS-dbw">
@@ -69,7 +108,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="GJD-7C-UWE" kind="relationship" relationship="rootViewController" id="sfM-bD-Uny"/>
+                        <segue destination="w3h-3I-F2v" kind="relationship" relationship="rootViewController" id="DcV-rN-Oix"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jLI-fj-FJW" userLabel="First Responder" sceneMemberID="firstResponder"/>
